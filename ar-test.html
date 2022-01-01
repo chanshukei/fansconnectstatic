@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <title>AR test</title>
+    <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>    
@@ -14,7 +15,8 @@
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           this.el.sceneEl.addEventListener('markerFound', () => {
-            alert("Found");
+            alert("Found Sica");
+            $('#abc').show();
           });
         }
       });
@@ -65,4 +67,8 @@
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
+
+  <div id="abc" style="display: none; position: absolute; top: 0; left: 0;">
+    <img src="./image/sica.gif">
+  </div>
 </body>
