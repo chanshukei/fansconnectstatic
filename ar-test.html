@@ -16,7 +16,7 @@
         init: function () {
           this.el.addEventListener('markerFound', () => {
             alert("Found SicaTTT");
-            $('#sicachu').hide();
+            //$('#sicachu').hide();
             $('#ttt').show();
           });
         }
@@ -26,8 +26,7 @@
         init: function () {
           this.el.addEventListener('markerFound', () => {
             alert("Found Sicachu");
-            $('#ttt').hide();
-            $('#sicachu').show();
+            window.location.href = "./item1.html";
           });
         }
       });
