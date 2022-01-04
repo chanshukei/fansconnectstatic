@@ -12,8 +12,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>    
     <script>
-      AFRAME.registerComponent('markerhandler', {
-
+      AFRAME.registerComponent('ttthandler', {
         init: function () {
           const marker = this.el;
           marker.sceneEl.addEventListener('markerFound', () => {
@@ -22,6 +21,17 @@
           });
         }
       });
+
+      AFRAME.registerComponent('sicachuhandler', {
+        init: function () {
+          const marker = this.el;
+          marker.sceneEl.addEventListener('markerFound', () => {
+            alert("Found Sica: "+ marker.id);
+            $('#abc').show();
+          });
+        }
+      });
+      
     </script>   
     <style>
       .arjs-loader {
@@ -59,7 +69,7 @@
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       id="tictactoast"
-      markerhandler
+      ttthandler
       type="nft"
       url="./path/to/ttt"
       smooth="true"
@@ -70,7 +80,7 @@
     </a-nft>
     <a-nft
       id="sicachu"
-      markerhandler
+      sicachuhandler
       type="nft"
       url="./path/sicachu/sicachu-marker"
       smooth="true"
