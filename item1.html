@@ -13,11 +13,9 @@
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>    
     <script>
       AFRAME.registerComponent('markerhandler', {
-
         init: function () {
-          const marker = this.el;
-          marker.sceneEl.addEventListener('markerFound', () => {
-            alert("Found Sica: "+ marker.id);
+          this.el.sceneEl.addEventListener('markerFound', () => {
+            alert("Found Sica");
             $('#abc').show();
           });
         }
@@ -58,7 +56,6 @@
   >
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
-      id="tictactoast"
       markerhandler
       type="nft"
       url="./path/to/ttt"
