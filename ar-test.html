@@ -14,7 +14,7 @@
     <script>
       AFRAME.registerComponent('ttthandler', {
         init: function () {
-          this.el.sceneEl.addEventListener('markerFound', () => {
+          this.el.addEventListener('markerFound', () => {
             alert("Found SicaTTT");
             $('#abc').show();
           });
@@ -23,13 +23,12 @@
 
       AFRAME.registerComponent('sicachuhandler', {
         init: function () {
-          this.el.sceneEl.addEventListener('markerFound', () => {
+          this.el.addEventListener('markerFound', () => {
             alert("Found Sicachu");
             $('#abc').show();
           });
         }
       });
-
     </script>   
     <style>
       .arjs-loader {
