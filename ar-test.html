@@ -14,8 +14,7 @@
     <script>
       AFRAME.registerComponent('ttthandler', {
         init: function () {
-          const marker = this.el;
-          marker.sceneEl.addEventListener('markerFound', () => {
+          this.el.sceneEl.addEventListener('markerFound', () => {
             alert("Found SicaTTT");
             $('#abc').show();
           });
@@ -24,8 +23,7 @@
 
       AFRAME.registerComponent('sicachuhandler', {
         init: function () {
-          const marker = this.el;
-          marker.sceneEl.addEventListener('markerFound', () => {
+          this.el.sceneEl.addEventListener('markerFound', () => {
             alert("Found Sicachu");
             $('#abc').show();
           });
