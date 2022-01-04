@@ -16,7 +16,8 @@
         init: function () {
           this.el.addEventListener('markerFound', () => {
             alert("Found SicaTTT");
-            $('#abc').show();
+            $('#sicachu').hide();
+            $('#ttt').show();
           });
         }
       });
@@ -25,7 +26,8 @@
         init: function () {
           this.el.addEventListener('markerFound', () => {
             alert("Found Sicachu");
-            $('#abc').show();
+            $('#ttt').hide();
+            $('#sicachu').show();
           });
         }
       });
@@ -90,7 +92,14 @@
     <a-entity camera></a-entity>
   </a-scene>
 
-  <div id="abc" style="display: none; position: absolute; top: 0; left: 0;">
+  <div id="ttt" style="display: none; position: absolute; top: 0; left: 0;">
     <img src="./image/sica.gif">
+  </div>
+
+  <div id="sicachu" style="display: none; position: absolute; top: 0; left: 0;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/caLgKqJtuf8" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
   </div>
 </body>
