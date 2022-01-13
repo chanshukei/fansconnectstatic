@@ -12,10 +12,19 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>    
     <script>
+      AFRAME.registerComponent('item1handler', {
+        init: function () {
+          this.el.addEventListener('markerFound', () => {
+            alert("已發現Sica！同你介紹返呢幅作品。");
+            window.location.href = "./item1.html";
+          });
+        }
+      });
+
       AFRAME.registerComponent('dollyhandler', {
         init: function () {
           this.el.addEventListener('markerFound', () => {
-            alert("已發現Sica！同你介紹返呢副作品。");
+            alert("已發現Sica！同你介紹返呢幅作品。");
             window.location.href = "./item2.html";
           });
         }
@@ -79,6 +88,17 @@
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
       <!-- we use cors proxy to avoid cross-origin problems -->
+      <a-nft
+        id="item1"
+        item1handler
+        type="nft"
+        url="./path/item1/item1-marker"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+      </a-nft>
       <a-nft
         id="dolly"
         dollyhandler
