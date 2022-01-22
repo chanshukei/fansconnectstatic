@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <title>今日流會(暫名)會員卡</title>
+    <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script>
+      function viewVideo(){
+        window.location.href = "https://youtu.be/re6pnLn6D9U";
+      }
+    </script>
+    <style>
+      button{
+        font-size: 18pt;
+        border-radius: 5pt;
+        width: 150pt;
+      }
+      h1{
+        text-align: center;
+        font-size: 24pt;
+        color: rgb(62, 190, 62);
+        text-shadow: 2px 2px white;
+      }
+      .step2{
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: auto;
+        padding: 10px;
+        border: 3px solid white;
+        border-radius: 20px;
+        width: 300px;
+        height: 500px;
+        z-index: 99;
+      }
+
+      body{
+        font-family: 'Alatsi';
+        margin: 0px; 
+        background-image: url('./image/card-bg.png'); 
+        background-size: 200px 200px; 
+        background-position: 100px 100px;
+        padding: 10px;
+      }
+
+      th{
+        font-weight: bold;
+        font-size: 14pt;
+        color: white;
+        vertical-align: text-top;
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      td{
+        font-size: 14pt;
+        color: white;
+        vertical-align: top;
+      }
+
+      a:visited{
+        color: rgb(193, 193, 255);
+      }
+      a{
+        color: rgb(193, 193, 255);
+      }
+      a:active{
+        color: rgb(193, 193, 255);
+      }
+      a:link{
+        color: rgb(193, 193, 255);
+      }
+      a:hover{
+        color: white;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="dolly" class="step2">
+    <h1>今日流會(暫名)<br />會員卡</h1>
+    <table>
+      <tr>
+        <th style="width: 250px">會員號碼</th>
+        <td>169</td>
+      </tr>
+      <tr>
+        <th>會員名稱</th>
+        <td>Xy</td>
+      </tr>
+      <tr>
+        <th>加入日期</th>
+        <td>早期</td>
+      </tr>
+      <tr>
+        <th>職位</th>
+        <td>文字創作總監</td>
+      </tr>
+      <tr>
+        <th>電話</th>
+        <td>21800000</td>
+      </tr>
+      <tr>
+        <th>電郵</th>
+        <td>xy@todayflow.com.hk</td>
+      </tr>
+      <tr>
+        <th><img src="./image/instagram.png"/></th>
+        <td style="vertical-align: bottom;">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <div onclick="viewVideo()">
+            <img height="100px" src="./image/logo-ar.gif" />
+          </div>
+        </th>
+        <td style="vertical-align: bottom;">
+          <img height="100px" src="./image/tgg.png" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
