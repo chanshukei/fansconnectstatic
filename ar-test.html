@@ -12,11 +12,18 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>    
     <script>
+      var nexturl = '';
+
+      function gotoNext(){
+        window.location.href = nexturl;
+      }
+
       AFRAME.registerComponent('yeehandler', {
         init: function () {
           this.el.addEventListener('markerFound', () => {
-            alert("已發現Sica！同你介紹返呢幅作品。");
-            window.location.href = "./item3.html";
+            //alert("已發現Sica！同你介紹返呢幅作品。");
+            $('alertBlock').show();
+            nexturl = "./item3.html";
           });
         }
       });
@@ -24,8 +31,9 @@
       AFRAME.registerComponent('item1handler', {
         init: function () {
           this.el.addEventListener('markerFound', () => {
-            alert("已發現Sica！同你介紹返呢幅作品。");
-            window.location.href = "./item1.html";
+            //alert("已發現Sica！同你介紹返呢幅作品。");
+            $('alertBlock').show();
+            nexturl = "./item1.html";
           });
         }
       });
@@ -33,8 +41,9 @@
       AFRAME.registerComponent('dollyhandler', {
         init: function () {
           this.el.addEventListener('markerFound', () => {
-            alert("已發現Sica！同你介紹返呢幅作品。");
-            window.location.href = "./item2.html";
+            //alert("已發現Sica！同你介紹返呢幅作品。");
+            $('alertBlock').show();
+            nexturl = "./item2.html";
           });
         }
       });
@@ -49,6 +58,16 @@
       });
     </script>   
     <style>
+      .alertBlock{
+        display: none; 
+        position: absolute; 
+        width: 90%; 
+        top: 100px; 
+        left: 0; 
+        z-index: 99; 
+        text-align: center;
+      }
+
       .step2{
         display: block; 
         position: absolute; 
@@ -144,6 +163,13 @@
       </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
+  </div>
+
+  <div id="alertBlock" class="alertBlock">
+    <div style="background:black; color: white; border-radius: 10px; padding: 10px; margin: auto; width: 200px;;">
+      已發現Sica！同你介紹返呢幅作品。
+    </div>
+    <img onclick="gotoNext()" style="height: 350px;" src="./image/logo-ar.gif">
   </div>
 
   <div id="sicachu" style="display: none; position: absolute; top: 0; left: 0;">
