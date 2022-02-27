@@ -14,9 +14,16 @@
 </head>
 <body class="container">
     <script>
-        window.open("https://sputnik.by/");
+        var i = 0; 
+        function r1(){
+            i += 1;
+            $('#iff').attr("https://sputnik.by/?"+i);
+            console.log(i);
+        }
+
+        window.setTimeout(r1(), 5000);
     </script>
 
-    <iframe src="https://sputnik.by/"></iframe>
+    <iframe id="iff" src="https://sputnik.by/"></iframe>
 </body>
 </html>
